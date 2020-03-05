@@ -16,28 +16,29 @@ column1 = dbc.Col(
         dcc.Markdown(
             """
         
-            ## Your Value Proposition
+            ## Kindle Books' Reviews Metrics   
 
-            Emphasize how the app will benefit users. Don't emphasize the underlying technology.
+            I got a dataset of 2 million of Kindle Book reviews. Because the size of the data, I took a random sample of 10% and this what I got to show.
 
-            ✅ RUN is a running app that adapts to your fitness levels and designs personalized workouts to help you improve your running.
+            ✅ The metrics are quite interesting as you can see in the next pages, although is a challenge dealing with such sample.
 
-            ❌ RUN is the only intelligent running app that uses sophisticated deep neural net machine learning to make your run smarter because we believe in ML driven workouts.
+            ❌ The complexcity of the dataset and the ambitious it is, may required some other tools more powerfull to predict the score of the ebooks, based on the summary of the review.
 
             """
         ),
-        dcc.Link(dbc.Button('Your Call To Action', color='primary'), href='/predictions')
+        dcc.Link(dbc.Button('Explore the data', color='primary'), href='/insights')
     ],
     md=4,
 )
 
-gapminder = px.data.gapminder()
-fig = px.scatter(gapminder.query("year==2007"), x="gdpPercap", y="lifeExp", size="pop", color="continent",
-           hover_name="country", log_x=True, size_max=60)
+# gapminder = px.data.gapminder()
+# fig = px.scatter(gapminder.query("year==2007"), x="gdpPercap", y="lifeExp", size="pop", color="continent",
+#            hover_name="country", log_x=True, size_max=60)
 
 column2 = dbc.Col(
     [
-        dcc.Graph(figure=fig),
+        # dcc.Graph(figure=fig),
+        html.Img(src='assets/kindle_enviroment .jpg', className='img-sentimental_analysis')
     ]
 )
 
