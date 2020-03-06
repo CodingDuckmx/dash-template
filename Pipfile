@@ -16,7 +16,6 @@ joblib = "==0.14.1"
 category-encoders = "==2.1.0"
 textblob = "*"
 datetime = "*"
-lightgbm = "*"
 
 [requires]
 python_version = "3.6.9"
