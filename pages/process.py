@@ -15,13 +15,26 @@ column1 = dbc.Col(
         dcc.Markdown(
             """
         
-            ## Process
+            ## For more details I recomend you to read my post on Medium.
 
 
             """
         ),
-
+        html.Div([
+            html.Div(id='page-2-content'),
+            html.Br(),
+            dcc.Link('Read the post', href='https://medium.com/@CodingDuckMx/predicting-kindle-books-reviews-3be74232e5d7'),
+        ])
     ],
 )
 
-layout = dbc.Row([column1])
+column2 = dbc.Col([
+
+html.Img(src='assets/kindle_app_ad.jpg', className='img-kindle_app_ad')
+
+])
+
+layout = dbc.Row([column2, column1])
+
+
+

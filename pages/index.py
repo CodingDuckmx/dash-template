@@ -26,7 +26,7 @@ column1 = dbc.Col(
 
             """
         ),
-        dcc.Link(dbc.Button('Explore the data', color='primary'), href='/insights')
+        dcc.Link(dbc.Button('Predict!', color='primary'), href='/predictions')
     ],
     md=4,
 )

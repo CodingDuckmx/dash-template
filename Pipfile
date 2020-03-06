@@ -8,9 +8,14 @@ verify_ssl = true
 [packages]
 dash = "*"
 dash-bootstrap-components = "*"
-gunicorn = "*"
+gunicorn = {extras = ["eventlet"],version = "*"}
 plotly = "*"
 pandas = "*"
+scikit-learn = "==0.22.2"
+joblib = "==0.14.1"
+category-encoders = "==2.1.0"
+textblob = "*"
+datetime = "*"
 
 [requires]
 python_version = "3"
