@@ -3,7 +3,7 @@ import dash
 import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 import dash_html_components as html
-from dash.dependencies import Input, Output
+from dash.dependencies import Input, Output, State
 
 import pandas as pd
 import numpy as np
@@ -637,8 +637,9 @@ def clean_numbers_signs(text):
 
 @app.callback(
     [Output('prediction-content', 'children')],
-    [Input('button','n_clicks'),Input('reviewdate', 'date'),Input('book', 'value'),
-    Input('image','value'),Input('inputreview','value')],
+    [Input('button','n_clicks')],
+    [State('reviewdate', 'date'),State('book', 'value'),
+    State('image','value'),State('inputreview','value')],
 )
 
 def predict(clicked,reviewdate,book,image,inputreview):
